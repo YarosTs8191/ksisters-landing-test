@@ -1,0 +1,225 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 487px;
+  overflow: hidden;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+
+  --parallax-x: 0px;
+  --parallax-y: 0px;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 41px 17px 0;
+  background-color: rgba(242, 244, 242, 0.54);
+}
+
+.eyebrow {
+  width: calc(100% - 32px);
+  margin: 0 auto;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.14);
+  color: #65725e;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 14px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.title {
+  max-width: 305px;
+  margin: 20px auto 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0.4px;
+}
+
+.description {
+  max-width: 323px;
+  margin: 18px auto 0;
+  padding-left: 19px;
+  color: #5a5a5a;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.15px;
+}
+
+.button {
+  display: none;
+}
+
+.visual {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.background {
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+  left: 0;
+  display: block;
+  height: 252px;
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product {
+  position: absolute;
+  z-index: 2;
+  top: 286px;
+  right: 48px;
+  width: 140px;
+}
+
+.leavesTopLeft {
+  position: absolute;
+  z-index: -1;
+  top: -30px;
+  left: 17px;
+  width: 124px;
+  transform: rotate(260deg);
+  transform-origin: center;
+  pointer-events: none;
+}
+
+.leavesBottomRight {
+  position: absolute;
+  z-index: 3;
+  right: -12px;
+  bottom: 27px;
+  width: 96px;
+}
+
+.parallaxLayer {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  pointer-events: none;
+
+  transform: translate3d(var(--parallax-x, 0px), var(--parallax-y, 0px), 0);
+  transition: transform 150ms ease-out;
+  will-change: transform;
+}
+
+.parallaxLayer img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .parallaxLayer {
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    max-width: 1200px;
+    height: 800px;
+    margin: 0 auto;
+  }
+
+  .content {
+    position: absolute;
+    z-index: 4;
+    top: 116px;
+    left: 80px;
+    width: 476px;
+    padding: 0;
+  }
+
+  .eyebrow {
+    width: 466px;
+    margin: 0;
+  }
+
+  .title {
+    max-width: 476px;
+    margin: 20px 0 0;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: -0.97px;
+  }
+
+  .description {
+    max-width: 466px;
+    margin: 20px 0 0;
+    font-size: 18px;
+    line-height: 28.8px;
+    letter-spacing: -0.44px;
+  }
+
+  .button {
+    display: flex;
+    width: 466px;
+    height: 60px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 999px;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 1.5px;
+  }
+
+  .background {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .parallaxLayer {
+    z-index: 1;
+  }
+
+  .product {
+    z-index: 2;
+    top: 283px;
+    right: auto;
+    left: 630px;
+    width: 380px;
+  }
+
+  .leavesTopLeft {
+    z-index: 3;
+    top: -118px;
+    left: -90px;
+    width: 271px;
+    transform: none;
+  }
+
+  .leavesBottomRight {
+    top: 559px;
+    right: auto;
+    bottom: auto;
+    left: 954px;
+    width: 262px;
+  }
+}

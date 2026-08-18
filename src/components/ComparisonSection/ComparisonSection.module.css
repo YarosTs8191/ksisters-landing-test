@@ -1,0 +1,285 @@
+.section {
+  position: relative;
+  width: 100%;
+  max-width: 375px;
+  min-height: 402px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #ffffff;
+  color: #2d281f;
+  font-family: "Inter", sans-serif;
+}
+
+.title {
+  position: absolute;
+  z-index: 3;
+  top: 25px;
+  left: 45px;
+  width: 310px;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: 0.1px;
+  text-align: center;
+}
+
+.layout {
+  position: relative;
+  width: 100%;
+  min-height: 402px;
+  margin: 0 auto;
+}
+
+.cards {
+  position: static;
+}
+
+/* Верхнє декоративне листя */
+
+.topLeaves {
+  position: absolute;
+  z-index: 2;
+  top: -20px;
+  left: -20px;
+  width: 117px;
+  transform: rotate(250deg);
+  transform-origin: center;
+  pointer-events: none;
+}
+
+/* Біла плашка */
+
+.issueCardWrapper {
+  position: absolute;
+  z-index: 3;
+  top: 75px;
+  left: 30px;
+  width: 180px;
+  height: 96px;
+}
+
+.issueCard {
+  box-sizing: border-box;
+  width: 159px;
+  height: 96px;
+  margin: 0;
+  padding: 12px;
+  border: 1px solid #ead8cb;
+  border-radius: 14px;
+  background-color: #ffffff;
+  color: #5a5a5a;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sadBadge {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 10px;
+  background-color: #d9ddd6;
+  font-size: 16px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.14);
+}
+
+.benefitCardWrapper {
+  position: absolute;
+  z-index: 2;
+  top: 179px;
+  left: 6px;
+  width: 185px;
+  height: 216px;
+}
+
+.benefitCard {
+  box-sizing: border-box;
+  width: 166px;
+  margin: 0 0 0 19px;
+  padding: 12px 13px 8px 12px;
+  overflow: hidden;
+  border-radius: 14px;
+  background-color: rgba(111, 125, 100, 0.9);
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+.sparkleBadge {
+  position: absolute;
+  z-index: 3;
+  top: 80px;
+  left: 0;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.25);
+  font-size: 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* Before/after slider */
+
+.sliderWrapper {
+  position: absolute;
+  z-index: 1;
+  top: 96px;
+  right: 12px;
+}
+
+/* Нижній декоративний листок */
+
+.bottomLeaf {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  left: 148px;
+  width: 106px;
+  pointer-events: none;
+}
+
+/* -----------------Анімація-------------------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .issueCardWrapper,
+  .benefitCardWrapper {
+    opacity: 0;
+  }
+
+  .isVisible .issueCardWrapper {
+    animation: issue-card-enter 2000ms ease-out forwards;
+  }
+
+  .isVisible .benefitCardWrapper {
+    animation: benefit-card-enter 1500ms ease-out 150ms forwards;
+  }
+
+  @keyframes issue-card-enter {
+    from {
+      opacity: 0;
+      transform: translateX(-32px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes benefit-card-enter {
+    from {
+      opacity: 0;
+      transform: translateY(32px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* ---------------------------------------------------------- */
+
+@media (min-width: 768px) {
+  .section {
+    max-width: 1200px;
+    min-height: 800px;
+  }
+
+  .layout {
+    min-height: 800px;
+  }
+
+  .title {
+    top: 56px;
+    left: 0;
+    width: 100%;
+    font-size: 40px;
+    line-height: 65px;
+  }
+
+  .issueCardWrapper {
+    top: 157px;
+    left: 64px;
+    width: 516px;
+    height: 219px;
+  }
+
+  .issueCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    box-sizing: content-box;
+    padding: 67px 42px;
+    width: 432px;
+    height: 85px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 29px;
+  }
+
+  .sliderWrapper {
+    top: 184px;
+    right: 48px;
+  }
+
+  .benefitCardWrapper {
+    top: 423px;
+    left: 89px;
+    width: 574px;
+    height: 312px;
+  }
+
+  .benefitCard {
+    box-sizing: content-box;
+    width: 436px;
+    height: 232px;
+    margin: 0 0 0 18px;
+    padding: 40px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 29px;
+  }
+
+  .sadBadge {
+    right: -55px;
+    top: 60px;
+    width: 80px;
+    height: 80px;
+    place-items: center;
+    border-radius: 24px;
+    font-size: 36px;
+  }
+
+  .sparkleBadge {
+    left: -40px;
+    width: 80px;
+    height: 80px;
+    top: 120px;
+    font-size: 27px;
+    border-radius: 22px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.24);
+  }
+
+  .topLeaves {
+    top: -55px;
+    left: -20px;
+    width: 261px;
+  }
+
+  .bottomLeaf {
+    left: 520px;
+    width: 201px;
+  }
+}
