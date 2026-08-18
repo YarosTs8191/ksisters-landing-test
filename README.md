@@ -1,16 +1,69 @@
-# React + Vite
+# Ksisters Landing Page Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Test task for a Front-End Developer (Landing Pages) position.
 
-Currently, two official plugins are available:
+## Tech stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React
+- Vite
+- JavaScript
+- CSS Modules
 
-## React Compiler
+## Implemented
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Responsive layout for desktop and mobile
+- Hero section based on the provided Figma design
+- Parallax effect in the hero section
+- Interactive before/after slider
+- Mouse and touch support
+- Entrance animations for comparison cards
+- Responsive decorative elements
 
-## Expanding the ESLint configuration
+## Assets
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Images were exported from Figma, prepared and optimized for the project.
+
+For responsive images I used separate desktop and mobile assets where needed.
+
+## Before/After Slider
+
+The slider is built with two overlapping images.
+
+The visible part of the second image is controlled with `clip-path`, while the slider position is controlled with a native `input[type="range"]`.
+
+## Time spent
+
+Approximately **10 hours of active work**.
+
+This included:
+
+- Figma analysis
+- asset export and image optimization
+- layout implementation
+- responsive adjustments
+- parallax and slider logic
+- animations
+- testing and cleanup
+
+## Main difficulties
+
+The main difficulty was preparing the assets from Figma and keeping the layout close to the design on both desktop and mobile.
+
+The before/after slider also required accurate positioning of two images and correct behavior for mouse and touch.
+
+## Run locally
+
+```bash
+npm install
+npm run dev
+npm run build
+```
+
+The project was also checked with:
+
+npm run lint
+Scope
+
+I focused on the first two required sections.
+
+The optional third section was not implemented because I decided to spend more time on the quality and responsiveness of the required parts.
