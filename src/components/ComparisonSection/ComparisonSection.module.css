@@ -156,11 +156,11 @@
   }
 
   .isVisible .issueCardWrapper {
-    animation: issue-card-enter 2000ms ease-out forwards;
+    animation: issue-card-enter 9000ms ease-out forwards;
   }
 
   .isVisible .benefitCardWrapper {
-    animation: benefit-card-enter 1500ms ease-out 150ms forwards;
+    animation: benefit-card-enter 800ms ease-out 150ms forwards;
   }
 
   @keyframes issue-card-enter {
