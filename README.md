@@ -33,7 +33,7 @@ The visible part of the second image is controlled with `clip-path`, while the s
 
 ## Time spent
 
-Approximately **10 hours of active work**.
+Approximately **9 hours of active work**.
 
 This included:
 
