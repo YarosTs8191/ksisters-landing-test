@@ -9,6 +9,7 @@ import heroBallsMobile from "../../assets/images/hero-balls-mobile.webp";
 import heroBallsDesktop from "../../assets/images/hero-balls-desktop.webp";
 import comparisonLeaf from "../../assets/images/comparison-leaf.webp";
 import heroWaveDesktop from "../../assets/images/hero-wave-desktop.webp";
+import heroWaveMobile from "../../assets/images/hero-wave-mobile.webp";
 import { useRef } from "react";
 
 function HeroSection() {
@@ -84,7 +85,8 @@ function HeroSection() {
           aria-hidden="true"
         />
         <picture className={styles.wave}>
-          <img src={heroWaveDesktop} alt="" />
+          <source media="(min-width: 768px)" srcSet={heroWaveDesktop} />
+          <img src={heroWaveMobile} alt="" />
         </picture>
       </div>
     </section>

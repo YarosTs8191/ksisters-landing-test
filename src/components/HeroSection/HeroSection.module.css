@@ -95,7 +95,7 @@
 .product {
   position: absolute;
   z-index: 2;
-  top: 282px;
+  top: 290px;
   right: 48px;
   width: 140px;
 }
@@ -117,6 +117,7 @@
   right: -12px;
   bottom: 27px;
   width: 96px;
+  top: 405px;
 }
 
 .parallaxLayer {
@@ -127,6 +128,8 @@
   display: block;
   width: 100%;
   pointer-events: none;
+
+  transform: translate(6px, 5px);
 }
 
 .parallaxLayer img {
@@ -136,7 +139,12 @@
 }
 
 .heroMiddleLeaf {
-  visibility: hidden;
+  position: absolute;
+  z-index: 5;
+  top: 307px;
+  left: 146px;
+  width: 90px;
+  pointer-events: none;
 }
 
 .wave {
@@ -242,6 +250,7 @@
   .parallaxLayer {
     z-index: 2;
     bottom: -80px;
+    transform: none;
   }
 
   .product {
