@@ -64,6 +64,13 @@
   pointer-events: none;
 }
 
+.backgroundClip {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
 .background {
   position: absolute;
   right: 0;
@@ -71,6 +78,7 @@
   left: 0;
   display: block;
   height: 252px;
+
   transform: translate3d(var(--parallax-x, 0px), var(--parallax-y, 0px), 0)
     scale(1.08);
 
@@ -87,7 +95,7 @@
 .product {
   position: absolute;
   z-index: 2;
-  top: 286px;
+  top: 282px;
   right: 48px;
   width: 140px;
 }
@@ -127,6 +135,25 @@
   height: auto;
 }
 
+.heroMiddleLeaf {
+  visibility: hidden;
+}
+
+.wave {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  pointer-events: none;
+}
+
+.wave img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .parallaxLayer {
     transform: none;
@@ -136,18 +163,22 @@
 
 @media (min-width: 768px) {
   .hero {
+    overflow: visible;
     max-width: 1200px;
     height: 800px;
     margin: 0 auto;
   }
 
   .content {
+    text-align: center;
+    margin: 0 auto;
     position: absolute;
     z-index: 4;
     top: 116px;
-    left: 80px;
-    width: 476px;
-    padding: 0;
+    /* left: 80px; */
+    width: 576px;
+    padding: 33px 40px;
+    border-radius: 10px;
   }
 
   .eyebrow {
@@ -190,19 +221,32 @@
     letter-spacing: 1.5px;
   }
 
+  .backgroundClip {
+    overflow: hidden;
+    z-index: 0;
+  }
+
   .background {
     inset: 0;
     width: 100%;
     height: 100%;
+
+    transform: translate3d(
+        calc(var(--parallax-x, 0px) + 2px),
+        calc(var(--parallax-y, 0px) + 18px),
+        0
+      )
+      scale(1);
   }
 
   .parallaxLayer {
-    z-index: 1;
+    z-index: 2;
+    bottom: -80px;
   }
 
   .product {
-    z-index: 2;
-    top: 283px;
+    z-index: 6;
+    top: 315px;
     right: auto;
     left: 630px;
     width: 380px;
@@ -222,5 +266,22 @@
     bottom: auto;
     left: 954px;
     width: 262px;
+  }
+  .heroMiddleLeaf {
+    visibility: visible;
+    position: absolute;
+    z-index: 5;
+    width: 106px;
+    pointer-events: none;
+    top: 420px;
+    left: 480px;
+    width: 273px;
+  }
+  .wave {
+    z-index: 1;
+    top: auto;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
   }
 }

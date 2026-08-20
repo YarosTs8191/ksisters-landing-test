@@ -7,6 +7,8 @@ import leavesTopLeft from "../../assets/images/hero-leaves-top-left.webp";
 import leavesBottomRight from "../../assets/images/hero-leaves-bottom-right.webp";
 import heroBallsMobile from "../../assets/images/hero-balls-mobile.webp";
 import heroBallsDesktop from "../../assets/images/hero-balls-desktop.webp";
+import comparisonLeaf from "../../assets/images/comparison-leaf.webp";
+import heroWaveDesktop from "../../assets/images/hero-wave-desktop.webp";
 import { useRef } from "react";
 
 function HeroSection() {
@@ -58,10 +60,12 @@ function HeroSection() {
       </div>
 
       <div className={styles.visual} aria-hidden="true">
-        <picture className={styles.background}>
-          <source media="(min-width: 768px)" srcSet={heroBackgroundDesktop} />
-          <img src={heroBackgroundMobile} alt="" />
-        </picture>
+        <div className={styles.backgroundClip}>
+          <picture className={styles.background}>
+            <source media="(min-width: 768px)" srcSet={heroBackgroundDesktop} />
+            <img src={heroBackgroundMobile} alt="" />
+          </picture>
+        </div>
 
         <img className={styles.product} src={heroProduct} alt="" />
         <picture className={styles.parallaxLayer}>
@@ -73,6 +77,15 @@ function HeroSection() {
           src={leavesBottomRight}
           alt=""
         />
+        <img
+          className={styles.heroMiddleLeaf}
+          src={comparisonLeaf}
+          alt=""
+          aria-hidden="true"
+        />
+        <picture className={styles.wave}>
+          <img src={heroWaveDesktop} alt="" />
+        </picture>
       </div>
     </section>
   );

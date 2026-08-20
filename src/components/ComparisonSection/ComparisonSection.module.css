@@ -5,7 +5,7 @@
   min-height: 402px;
   margin: 0 auto;
   overflow: hidden;
-  background-color: #ffffff;
+  background-color: transparent;
   color: #2d281f;
   font-family: "Inter", sans-serif;
 }
@@ -194,6 +194,7 @@
   .section {
     max-width: 1200px;
     min-height: 800px;
+    margin-top: -5px;
   }
 
   .layout {
